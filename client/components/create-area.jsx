@@ -12,3 +12,5 @@ function CreateArea(){
         </div>
     )
 }
+
+export default CreateArea;
