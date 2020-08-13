@@ -11,8 +11,13 @@ function CreateArea(){
     return(
         <div>
             <form>
-                <input placeholder="Title"/>
-                <textarea name="" placeholder="Write a note" rows="3"></textarea>
+                <input name="title" value={note.title} placeholder="Title"/>
+                <textarea 
+                    name="content" 
+                    value={note.content} 
+                    placeholder="Write a note" 
+                    rows="3">
+                </textarea>
                 <button>Add</button>
 
             </form>
