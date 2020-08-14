@@ -8,12 +8,26 @@ function CreateArea(){
 
     });
 
+    function handleChange(event){
+        // const {name, value} = event.target;
+
+        // setNote(prevNote => {
+
+        // });
+    }
+
     return(
         <div>
             <form>
-                <input name="title" value={note.title} placeholder="Title"/>
+                <input 
+                    name="title" 
+                    onChange={handleChange} 
+                    value={note.title} 
+                    placeholder="Title"
+                />
                 <textarea 
                     name="content" 
+                    onChange={handleChange}
                     value={note.content} 
                     placeholder="Write a note" 
                     rows="3">
