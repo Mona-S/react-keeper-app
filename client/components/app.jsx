@@ -7,6 +7,10 @@ import CreateArea from "./create-area";
 
 
 function App() {
+
+    function addNote(note){
+
+    }
   return (
     <div>
       <Header />
@@ -18,7 +22,7 @@ function App() {
           />
       )}
       <Footer />
-      <CreateArea />
+      <CreateArea onAdd={addNote}/>
     </div>
   );
 }

@@ -20,8 +20,9 @@ function CreateArea(){
         });
     }
 
-    function submitNote(){
-        
+    function submitNote(event){
+        event.preventDefault();
+
     }
 
     return(
