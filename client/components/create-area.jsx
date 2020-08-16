@@ -12,8 +12,16 @@ function CreateArea(){
         const {name, value} = event.target;
 
         setNote(prevNote => {
+            return {
+                ...prevNote,
+                [name] : value
 
+            };
         });
+    }
+
+    function submitNote(){
+        
     }
 
     return(
@@ -32,7 +40,7 @@ function CreateArea(){
                     placeholder="Write a note" 
                     rows="3">
                 </textarea>
-                <button>Add</button>
+                <button onClick={submitNote}>Add</button>
 
             </form>
         </div>
