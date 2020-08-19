@@ -10,8 +10,10 @@ function App() {
 
     const [notes, setNotes] = useState([]);
 
-    function addNote(note){
-        console.log(note);
+    function addNote(newNote){
+        setNotes(prevNotes => {
+            [... prevNotes, newNote];
+        })
 
     }
   return (
