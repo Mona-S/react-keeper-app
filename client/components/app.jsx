@@ -8,6 +8,8 @@ import CreateArea from "./create-area";
 
 function App() {
 
+    const [notes, setNotes] = useState([]);
+
     function addNote(note){
         console.log(note);
 
