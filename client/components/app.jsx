@@ -9,6 +9,7 @@ import CreateArea from "./create-area";
 function App() {
 
     function addNote(note){
+        console.log(note);
 
     }
   return (
