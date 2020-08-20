@@ -12,22 +12,24 @@ function App() {
 
     function addNote(newNote){
         setNotes(prevNotes => {
-            [... prevNotes, newNote];
+           return [... prevNotes, newNote];
         })
 
     }
   return (
     <div>
       <Header />
-      {notes.map(singleNote => 
-          <Note
-          key={singleNote.key}
-          title={singleNote.title}
-          content={singleNote.content}
-          />
-      )}
-      <Footer />
       <CreateArea onAdd={addNote}/>
+
+      {notes.map(noteItem => {
+          return <Note
+        //   key={singleNote.key}
+          title={noteItem.title}
+          content={noteItem.content}
+          />
+    })}
+      <Footer />
+      
     </div>
   );
 }
