@@ -3,20 +3,33 @@ import Header from "./header.jsx";
 import Footer from "./footer.jsx";
 import Note from "./note.jsx";
 import notes from "../notes.jsx";
+import CreateArea from "./create-area";
 
 
 function App() {
+
+    const [notes, setNotes] = useState([]);
+
+    function addNote(newNote){
+        setNotes(prevNotes => {
+           return [... prevNotes, newNote];
+        })
+
+    }
   return (
     <div>
       <Header />
-      {notes.map(singleNote => 
-          <Note
-          key={singleNote.key}
-          title={singleNote.title}
-          content={singleNote.content}
+      <CreateArea onAdd={addNote}/>
+
+      {notes.map(noteItem => {
+          return <Note
+        //   key={singleNote.key}
+          title={noteItem.title}
+          content={noteItem.content}
           />
-      )}
+    })}
       <Footer />
+      
     </div>
   );
 }
