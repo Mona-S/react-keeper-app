@@ -16,16 +16,18 @@ function App() {
         })
 
     }
+
+    function deleteNote(id){
+
+    }
+
   return (
     <div>
       <Header />
       <CreateArea onAdd={addNote}/>
 
       {notes.map(noteItem => {
-          return <Note
-        //   key={singleNote.key}
-          title={noteItem.title}
-          content={noteItem.content}
+          return <Note title={noteItem.title} content={noteItem.content} onDelete={deleteNote}
           />
     })}
       <Footer />

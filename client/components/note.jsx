@@ -5,6 +5,7 @@ function Note(props){
     function handleClick(){
 
     }
+    
     return(
         <div className="note">
             <h1>{props.title}</h1>
