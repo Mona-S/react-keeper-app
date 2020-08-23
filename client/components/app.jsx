@@ -18,7 +18,7 @@ function App() {
     }
 
     function deleteNote(id){
-
+        console.log("delete was triggered");
     }
 
   return (
